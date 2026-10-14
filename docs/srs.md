@@ -43,3 +43,41 @@ Bu proje, web tabanlı, eşzamanlı olmayan (asynchronous) bir Orta Çağ strate
 - **Zaman Yönetimi:** PHP'nin `DateTime` sınıfı ve test edilebilirlik için özel bir `Clock` arayüzü kullanılacaktır.
 - **Savaş Formülü:** *Strategy* tasarım deseni ile soyutlanacaktır.
 - **Veri Katmanı:** *Repository* deseni ile soyutlanıp, Aşama 2'de JSON, Aşama 3'te MySQL + PDO olarak uygulanacaktır. Eşzamanlılık (yarış durumu) koşullu `UPDATE` sorguları ile çözülecektir.
+6. UML Sınıf Diyagramı (Taslak)
+Aşağıdaki diyagram, sistemin çekirdek kaynak hesaplama ve mimari tasarımını göstermektedir.
+
+```mermaid
+classDiagram
+    class ClockInterface {
+        <<interface>>
+        +now() DateTimeImmutable
+    }
+    class SystemClock {
+        +now() DateTimeImmutable
+    }
+    ClockInterface <|.. SystemClock
+
+    class Village {
+        +int id
+        +int user_id
+        +float wood
+        +float stone
+        +float gold
+        +DateTimeImmutable last_update
+    }
+
+    class ResourceCalculatorService {
+        -ClockInterface clock
+        -array buildingConfigs
+        +calculateCurrentResources(Village village) Village
+        -calculateProductionSince(DateTimeImmutable lastUpdate, float baseProduction) float
+    }
+
+    class VillageRepositoryInterface {
+        <<interface>>
+        +find(int id) Village
+        +save(Village village) bool
+    }
+
+    ResourceCalculatorService ..> ClockInterface : uses
+    ResourceCalculatorService ..> Village : updates
