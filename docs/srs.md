@@ -26,7 +26,6 @@ Bu proje, web tabanlı, eşzamanlı olmayan (asynchronous) bir Orta Çağ strate
 - **US-10:** Bir oyuncu olarak saldırı süresi dolduğunda, savaşın sonucunu (kayıplar, kazanılan ganimet) bir rapor olarak görebilmeliyim.
 
 ## 4. Kullanım Senaryosu (Use-Case) Diyagramı Metni
-*(Not: Sunum için bu metni draw.io veya benzeri bir araçla görselleştirmeliyiz)*
 - **Aktör:** Oyuncu
 - **Senaryolar:** 
   - Kayıt Ol / Giriş Yap
