@@ -43,7 +43,7 @@ Bu proje, web tabanlı, eşzamanlı olmayan (asynchronous) bir Orta Çağ strate
 - **Savaş Formülü:** *Strategy* tasarım deseni ile soyutlanacaktır.
 - **Veri Katmanı:** *Repository* deseni ile soyutlanıp, Aşama 2'de JSON, Aşama 3'te MySQL + PDO olarak uygulanacaktır. Eşzamanlılık (yarış durumu) koşullu `UPDATE` sorguları ile çözülecektir.
 
-6. UML Sınıf Diyagramı (Taslak)
+## 6. UML Sınıf Diyagramı (Taslak)
 Aşağıdaki diyagram, sistemin çekirdek kaynak hesaplama ve mimari tasarımını göstermektedir.
 
 ```mermaid
@@ -81,4 +81,3 @@ classDiagram
 
     ResourceCalculatorService ..> ClockInterface : uses
     ResourceCalculatorService ..> Village : updates
-
