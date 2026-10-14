@@ -42,7 +42,7 @@ Bu proje, web tabanlı, eşzamanlı olmayan (asynchronous) bir Orta Çağ strate
 - **Zaman Yönetimi:** PHP'nin `DateTime` sınıfı ve test edilebilirlik için özel bir `Clock` arayüzü kullanılacaktır.
 - **Savaş Formülü:** *Strategy* tasarım deseni ile soyutlanacaktır.
 - **Veri Katmanı:** *Repository* deseni ile soyutlanıp, Aşama 2'de JSON, Aşama 3'te MySQL + PDO olarak uygulanacaktır. Eşzamanlılık (yarış durumu) koşullu `UPDATE` sorguları ile çözülecektir.
-<<<<<<< HEAD
+
 6. UML Sınıf Diyagramı (Taslak)
 Aşağıdaki diyagram, sistemin çekirdek kaynak hesaplama ve mimari tasarımını göstermektedir.
 
@@ -81,5 +81,4 @@ classDiagram
 
     ResourceCalculatorService ..> ClockInterface : uses
     ResourceCalculatorService ..> Village : updates
-=======
->>>>>>> b1d5f80d7dde6825ed93aae76d09554b0cd4a34c
+
