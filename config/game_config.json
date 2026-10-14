@@ -1,0 +1,12 @@
+{
+  "buildings": {
+    "lumber_jack": { "name": "Oduncu", "base_cost": { "wood": 40, "stone": 20, "gold": 10 }, "cost_multiplier": 1.5, "base_production": 30, "build_time_seconds": 60 },
+    "quarry": { "name": "Taş Ocağı", "base_cost": { "wood": 30, "stone": 50, "gold": 10 }, "cost_multiplier": 1.5, "base_production": 20, "build_time_seconds": 90 },
+    "barracks": { "name": "Kışla", "base_cost": { "wood": 100, "stone": 100, "gold": 50 }, "cost_multiplier": 1.8, "base_production": 0, "build_time_seconds": 120 },
+    "main_building": { "name": "Köy Merkezi", "base_cost": { "wood": 200, "stone": 200, "gold": 100 }, "cost_multiplier": 2.0, "base_production": 10, "build_time_seconds": 180 }
+  },
+  "units": {
+    "infantry": { "name": "Piyade", "cost": { "wood": 20, "stone": 10, "gold": 5 }, "attack": 10, "defense": 15, "train_time_seconds": 30 },
+    "cavalry": { "name": "Süvari", "cost": { "wood": 50, "stone": 30, "gold": 20 }, "attack": 25, "defense": 10, "train_time_seconds": 60 }
+  }
+}
