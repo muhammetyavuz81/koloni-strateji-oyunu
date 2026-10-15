@@ -79,8 +79,6 @@ classDiagram
         +save(Village village) bool
     }
 
-    ResourceCalculatorService ..> ClockInterface : uses
-    ResourceCalculatorService ..> Village : updates
     ## 7. Risk Yönetimi (Risk Tablosu)
 Proje geliştirme sürecinde öngörülen teknik riskler ve bu riskleri azaltma stratejileri aşağıda listelenmiştir:
 
