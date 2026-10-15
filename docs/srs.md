@@ -90,3 +90,5 @@ Proje geliştirme sürecinde öngörülen teknik riskler ve bu riskleri azaltma 
 | **Arka Plan Görevi (Cron) Olmadan Kaynak Hesabı** | Düşük | Yüksek | Mimari tamamen zaman damgası farkına dayandırıldı. Algoritmanın doğruluğunu kanıtlamak için `ClockInterface` ile zamanı ileri saran PHPUnit testleri (TDD) yazılacak. |
 | **Eşzamanlılık (Race Condition / Yarış Durumu)** | Yüksek | Yüksek | Aynı milisaniyede gelen çoklu bina yükseltme veya kaynak harcama isteklerini önlemek için Aşama 3'te *Transaction* ve koşullu `UPDATE` kilitleri kullanılacak. |
 | **Aşama 3'te MySQL'e Geçişin İş Mantığını Bozması** | Düşük | Orta | Veri erişim katmanı *Repository* tasarım deseniyle soyutlandı. Aşama 2'den Aşama 3'e geçerken çekirdek servis kodlarında hiçbir değişiklik yapılmayacak. |
+    ResourceCalculatorService ..> ClockInterface : uses
+    ResourceCalculatorService ..> Village : updates
