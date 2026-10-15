@@ -81,7 +81,9 @@ classDiagram
 
     ResourceCalculatorService ..> ClockInterface : uses
     ResourceCalculatorService ..> Village : updates
-    ## 7. Risk Yönetimi (Risk Tablosu)
+```
+
+## 7. Risk Yönetimi (Risk Tablosu)
 Proje geliştirme sürecinde öngörülen teknik riskler ve bu riskleri azaltma stratejileri aşağıda listelenmiştir:
 
 | Risk Tanımı | Olasılık | Etki | Çözüm / Azaltma Stratejisi (Mitigation) |
